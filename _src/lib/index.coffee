@@ -1,6 +1,5 @@
 SessionHandler = require( "./sessionhandler" )
 SessionObject = require( "./sessionobject" )
-pause = require( "pause" )
 
 module.exports = ( options )->
 	sessionHandler = new SessionHandler( options )
@@ -65,12 +64,12 @@ module.exports = ( options )->
 				return
 			else
 
-				_pause = pause(req)
+				req.pause()
 				sessionHandler.get req, ( err, data )->
 					_next = next
 					next = ( err )->
 						_next( err )
-						_pause.resume()
+						req.resume()
 
 					if err
 						console.log "GET ERROR", err if sessionHandler.debug
