@@ -16,7 +16,7 @@ module.exports = ( options )->
 			return
 
 		# pathname mismatch
-		return next() if req.originalUrl.indexOf( sessionHandler.cookie.path or "/" )
+		return next() if (req.originalUrl || req.url).indexOf( sessionHandler.cookie.path or "/" )
 
 		sessionHandler.getApp req, ( err, appname )->
 			if err
