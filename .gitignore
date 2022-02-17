@@ -8,7 +8,6 @@
 .settings
 .idea
 
-/lib
 /test
 /node_modules
 /*.js
