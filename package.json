@@ -2,7 +2,7 @@
   "author": "mp, <mp@tcs.de> (www.tcs.de)",
   "name": "connect-redis-sessions",
   "description": "Session store using redis-sessions for Connect",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "homepage": "https://github.com/mpneuried/connect-redis-sessions",
   "private": false,
   "repository": {
@@ -10,7 +10,7 @@
     "url": "git://github.com/mpneuried/connect-redis-sessions.git"
   },
   "engines": {
-    "node": "> 6"
+    "node": "> 10"
   },
   "dependencies": {
     "redis-sessions": "4.0.0",
